@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Capstone Project Quiz App</title>
+    <meta name="description" content="Quantum Mechanics Quiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="grid.css" rel="stylesheet">
+    <style type="text/css">html, body {overflow: hidden;}</style>
+</head>
+
+<body class="js-body">
+    <main role="main">
+        <div role="Start Screen" id="quizBox" class="quizStart box startScreen">
+            <div class="start-title title">Experience the Quantum</div>
+            <button id="submitButton" class="start-button sub-bttn">Start Quiz!</button>
+        </div>
+        <div class="img">
+            <img id="theAtom" src="atom.png" alt="Atom image background">
+        </div>
+        <section role="region" id="questionAnswerForm" class="box questionAnswerForm">
+        <form action="javascript:submitAnswer();" method="post" class="signup-form">
+                <fieldset>
+                    <legend class="title">Quantum Quiz</legend>
+                    <div class="score-board">Question: 1 - Score: 0</div>
+                    <div id="questionCell" class="quest"></div>
+                    <label class="answer">
+                        <input id="ans1" type="radio" name="answer" value="1" required/>
+                        <span>
+                            <label class="answer1 ans1" for="ans1"></label>
+                        </span>
+                    </label>
+                    <label class="answer">
+                        <input id="ans2" type="radio" name="answer" value="2" />
+                        <span>
+                            <label class="answer2 ans2" for="ans2"></label>
+                        </span>
+                    </label>
+                    <label class="answer">
+                        <input id="ans3" type="radio" name="answer" value="3" />
+                        <span>
+                            <label class="answer3 ans3" for="ans3"></label>
+                        </span>
+                    </label>
+                    <label class="answer">
+                        <input id="ans4" type="radio" name="answer" value="4" />
+                        <span>
+                            <label class="answer4 ans4" for="ans4"></label>
+                        </span>
+                    </label>
+                    <input type="submit" id="submitButton" class="sub-bttn">
+                    <a class="restart-link" href="index.html">Click here to Restart!</a>
+                </fieldset>
+        </form>
+        </section>
+        <div id="grade" class="box grade" style="display:none;"></div>
+        <div role="positive feedback" class="box positiveFeedback">
+            <img alt="Green Checkmark" class="feedback" src="correct.png">
+            <p class="feedbackMessage">That's Correct! +10!</p>
+            <button class="sub-bttn" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="box negativeFeedback">
+            <img alt="Red X" class="feedback" src="wrong.png">
+            <p>That's incorrect! Correct answer is:</p>
+            <p class="nFeedbackMessage"></p>
+            <button class="sub-bttn" onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="box failFeedback">
+            <img alt="Failed Stamp" class="feedback" src="fail.png">
+            <p>Woud you like to try again? Your score was: </p>
+            <p class="feedbackMessage final failingMessage">Woud you like to try again?</p>
+            <a class="restart-link" href="index.html">Let's do it!</a>
+        </div>
+        <div class="box passFeedback">
+            <img alt="Passed Stamp" class="feedback" src="passed.png">
+            <p>Great Job! Your score was: </p>
+            <p class="feedbackMessage final passingMessage">Great Job! Once More?</p>
+            <a class="restart-link" href="index.html">One More Time!</a>
+        </div>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="dataSTORE.js"></script>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>
