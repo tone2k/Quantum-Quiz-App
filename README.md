@@ -21,7 +21,7 @@ Positive Feedback:
 
 End:
 
-![results](screenshotD.PNG)
+![results](screenshotD.png)
 
 ## Summary
 
