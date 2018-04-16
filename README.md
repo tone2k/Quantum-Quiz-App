@@ -25,7 +25,7 @@ End:
 
 Mobile:
 
-![results](screenshotE.png)
+![results](screenshotE.jpg)
 
 ## Summary
 
